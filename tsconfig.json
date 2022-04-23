@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "allowJs": true,
+    "jsx": "preserve",
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["./components/*"],
+      "utils/*": ["./utils/*"],
+      "hooks/*": ["./hooks/*"]
+    },
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
