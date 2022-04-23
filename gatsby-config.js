@@ -7,14 +7,14 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-typescript`,
+      resolve: 'gatsby-plugin-typescript',
       options: {
         isTSX: true,
         allExtensions: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,29 +23,15 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://rlwnd0000.github.io/',
-        stripQueryString: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `contents`,
         path: `${__dirname}/static`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: '<https://my-website.com/>',
-        stripQueryString: true,
-      }
-    },
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-sitemap',
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
@@ -56,12 +42,7 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -101,8 +82,19 @@ module.exports = {
         ],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://rlwnd0000.github.io/',
+        stripQueryString: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }
