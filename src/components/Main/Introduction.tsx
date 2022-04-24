@@ -2,6 +2,9 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import ProfileImage from 'components/Main/ProfileImage'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+import { faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
 
 type IntroductionProps = {
   profileImage: IGatsbyImageData
@@ -38,6 +41,40 @@ const Title = styled.div`
   color: white;
 `
 
+const Header = styled.div`
+  .header-inner {
+    margin: 0 auto;
+    max-width: $app-max-width;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    ul {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      li {
+          display: inline;
+          margin-bottom: 0;
+          & + li {
+              margin-left: 15px;
+          }
+          a {
+              opacity: 0.4;
+              &:hover {
+                  opacity: 1;
+                  transition: 0.3s;
+              }
+              @media all and (min-width: 768px) {
+
+              }
+          }
+      }
+    }
+  }
+`
+
 const Introduction: FunctionComponent<IntroductionProps> = function ({
   profileImage,
 }) {
@@ -45,10 +82,23 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
     <Background>
       <Wrapper>
         <ProfileImage profileImage={profileImage} />
-
-        <div>
-          <Title> GiJoongblog</Title>
+        <Header>
+        <div className="header-inner">
+          <Title>GiJoongblog</Title>
+          <ul>
+            <li>
+                <a href="https://github.com/gijoongjang" target="_blank">
+                    <FontAwesomeIcon icon={faGithub} className="fa-lg"/>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/71_joong" target="_blank">
+                    <FontAwesomeIcon icon={faInstagramSquare} className="fa-lg"/>
+                </a>
+            </li>
+          </ul>
         </div>
+      </Header>
       </Wrapper>
     </Background>
   )

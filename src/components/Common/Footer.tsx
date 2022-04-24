@@ -18,7 +18,7 @@ const FooterWrapper = styled.footer`
 const Footer: FunctionComponent = function () {
   return (
     <FooterWrapper>
-       Copyright ⓒ 2022 by gijoongjang
+       Copyright ⓒ 2022 gijoongjang Built with Gatsby
     </FooterWrapper>
   )
 }
