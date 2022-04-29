@@ -1,8 +1,8 @@
 ---
 date: '2022-04-30'
-title: '스프링 시큐리티 기본 개념 및 구조'
+title: '스프링 시큐리티 기본 개념 및 구현'
 categories: ['Springboot']
-summary: 'Study'
+summary: 'SpringSecurity,Study'
 thumbnail: '../images/springSecurity/springsecurity1.png'
 ---
 
