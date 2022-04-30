@@ -145,18 +145,18 @@
 </ul>
 <h3>7.user_access.jsp 생성</h3>
 <p>user_access.jsp</p>
-<div class="gatsby-highlight" data-language="jsp"><pre class="language-jsp"><code class="language-jsp">&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;main&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;환영합니다!!!&lt;/h1&gt;
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>main<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>환영합니다!!!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
 &lt;%
-    String name = (String) session.getAttribute(&quot;name&quot;);
-%&gt;
-&lt;a href=&quot;#&quot;&gt;&lt;%=name%&gt;님 환영합니다!&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre></div>
+    String name = (String) session.getAttribute("name");
+%>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&lt;%=name%>님 환영합니다!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre></div>
 <ul>
 <li>LoginSuccessHandler.java에서 Session 객체에 로그인한 유저 이름이 담겨서 보냈으므로 로그인 성공시 로그인한 이름을 보여준다.</li>
 </ul>
