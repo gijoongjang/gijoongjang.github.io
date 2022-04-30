@@ -169,7 +169,7 @@ public class UserController {
 
 ### 7.user_access.jsp 생성
 user_access.jsp
-```jsp
+```html
 <html>
 <head>
     <title>main</title>
