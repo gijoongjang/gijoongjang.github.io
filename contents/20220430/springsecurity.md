@@ -2,8 +2,8 @@
 date: '2022-04-30'
 title: '스프링 시큐리티 기본 개념 및 구현'
 categories: ['Springboot']
-summary: 'SpringSecurity,Study'
-thumbnail: '../images/springSecurity/springsecurity1.png'
+summary: 'SpringSecurity,Springboot'
+thumbnail: './springsecurity1.png'
 ---
 
 # 스프링 시큐리티(Spring Security)란?
@@ -167,12 +167,30 @@ public class UserController {
 - authentication 객체에 로그인한 유저정보(DB에서 가져온) 담겨져있음
 - 로그인 성공시 결국엔 user_access.jsp로 이동
 
-### 7.결과
+### 7.user_access.jsp 생성
+user_access.jsp
+```jsp
+<html>
+<head>
+    <title>main</title>
+</head>
+<body>
+<h1>환영합니다!!!</h1>
+<%
+    String name = (String) session.getAttribute("name");
+%>
+<a href="#"><%=name%>님 환영합니다!</a>
+</body>
+</html>
+```
+- LoginSuccessHandler.java에서 Session 객체에 로그인한 유저 이름이 담겨서 보냈으므로 로그인 성공시 로그인한 이름을 보여준다.
+
+### 8.결과
 #### -로그인 화면
-### <img src="../images/springSecurity/springsecurity2.png" />
+### <img src="./springsecurity2.png" />
 ---
 #### -로그인 성공시
-### <img src="../images/springSecurity/springsecurity3.png" />
+### <img src="./springsecurity3.png" />
 
 ### 자세한 정보는
 <https://github.com/gijoongjang/springSecurityExample>
