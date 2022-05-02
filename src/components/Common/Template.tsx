@@ -47,6 +47,8 @@ type TemplateProps = {
           <meta name="twitter:image" content={image} />
           <meta name="twitter:site" content="@사용자이름" />
           <meta name="twitter:creator" content="@사용자이름" />
+          
+          <meta name="google-site-verification" content="XH4BaRvJcIYfyQf1Dfs-MKWZ9iARLf8gTR-lnxCE0LM" />
   
           <html lang="ko" />
         </Helmet>
