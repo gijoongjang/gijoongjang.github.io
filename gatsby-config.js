@@ -93,6 +93,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        host: 'https://gijoongjang.github.io',
+        sitemap: 'https://gijoongjang.github.io/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
